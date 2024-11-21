@@ -130,13 +130,3 @@ app.get('/delete/:id',(req,res)=>{
         }
     });
 });
-
-// Renderizar el archivo EJS
-ejs.renderFile(path.join(inputDir, 'index.ejs'), {}, (err, str) => {
-  if (err) {
-    console.error("Error al renderizar EJS:", err);
-    return;
-  }
-  fs.outputFileSync(path.join(outputDir, 'index.html'), str);
-  console.log("index.html generado exitosamente.");
-});
