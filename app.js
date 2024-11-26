@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-
+const path = require('path');
 
 const app = express();
 //configuracion para el uso de peticiones post
@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.set('view engine','ejs');
 app.set('views', './views');
 app.use(express.static('public')); // importante para express para que pueda conectar con css
+app.set('views', path.join(__dirname, 'views'));
 
 const db = mysql.createConnection({
     host: 'localhost', // server
