@@ -32,7 +32,7 @@ db.connect(err=>{
 
 //iniciamos el server
 //const hostname = '0.0.0.0' // esta es para realizarlo por ip
-const port =3009
+const port =4000
 app.listen(port,()=>{ // colocar hostname en lugar de port
     console.log(`servidor en funcionamiento desde http://localhost:${port}`) // en lugar de http://localhost se coloca ${direccion ip hostname}
 });
